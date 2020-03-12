@@ -27,6 +27,11 @@ ENV PATH $NVM_INSTALL_PATH/bin:$PATH
 # Install yarn
 RUN npm install -g yarn
 
+# Install 2.0.1 bundler
+RUN gem install bundler -v '2.0.1' 
+RUN gem list
+RUN bundle -v
+
 # Verify installation
 RUN npm -v 
 RUN node -v 
