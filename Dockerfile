@@ -1,5 +1,7 @@
 FROM ruby:2.3.4
 
+ENV LANG C.UTF-8
+
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
